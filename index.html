@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бюджет</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="sub-container">
+        <!-- Бюджет -->
+        <div class="total-amount-container">
+          <h3>Бюджет</h3>
+          <p class="hide error" id="budget-error">Значение не может быть пустым или отрицательным</p>
+          <input type="number" id="total-amount" placeholder="Введите общую сумму">
+          <button class="submit" id="total-amount-button">Установить бюджет</button>
+        </div>
+        
+        <!-- Расходы -->
+        <div class="user-amount-container">
+          <h3>Расходы</h3>
+          <p class="hide error" id="product-title-error">Значение не может быть пустым или отрицательным</p>
+          <input type="text" class="product-title" id="product-title" placeholder="Введите название продукта">
+          <input type="number" id="user-amount" placeholder="Введите стоимость продукта">
+          <button class="submit" id="check-amount">Внести</button>
+        </div>
+      </div>
+    
+      <!-- Итого -->
+      <div class="output-container flex-space">
+        <div>
+          <p>Бюджет</p>
+          <span id="amount" class="rub">0</span>
+        </div>
+        <div>
+          <p>Затраты</p>
+          <span id="expenditure-value" class="rub">0</span>
+        </div>
+        <div>
+          <p>Осталось</p>
+          <span id="balance-amount" class="rub">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Список продуктов -->
+    <div class="list">
+      <h3>Список трат</h3>
+      <div class="list-container" id="list"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
